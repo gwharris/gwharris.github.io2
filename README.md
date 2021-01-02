@@ -1,6 +1,6 @@
 # Simple Game
 
 ## Code by Graham Harris and Donny Flores
-## Story from Nina Harris
+<b>Story from Nina Harris<b>
 
 Project incomplete - description coming soon.
