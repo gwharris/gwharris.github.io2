@@ -1,0 +1,41 @@
+/* Main stylesheet for game */
+
+/* General formatting */
+html {
+  height: 100%;
+  animation: welcome 6s; /* smooth page load */
+  background-color: rgb(236, 225, 200);
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+@keyframes welcome {
+  /* Changes setting for smooth page load */
+  0% {background-color: white;
+      color: white}
+  100% {background-color: rgb(236, 225, 200);
+      color: black;}
+}
+
+/* Main */
+.main {
+  text-align: left;
+  margin: 40px;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  height: 80%;
+  position: fixed;
+}
+
+/* Footer */
+.footer {
+  margin: 40px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

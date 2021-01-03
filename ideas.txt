@@ -9,7 +9,7 @@ Something like the web game "A Dark Room"
 Option to start the game as different classes? Maybe choose 3?
 - thief (chance for a critical attack? should all classes get critical chance?)
 - knight (extra health?)
-- mage (extra attack?)
+- mage (extra attack? ability to heal?)
 Each class gets a slight boon of some kind (mage gets more magic, warrior has extra health, etc)
 
 Turn based? Monsters have a set damage output, health, and defense?
