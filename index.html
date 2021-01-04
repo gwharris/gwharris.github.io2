@@ -15,7 +15,18 @@
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <body>
   <section class="main">
-    <p>This is where the story's text will go!</p>
+    <p>
+      Welcome to the text adventure game! 
+      
+    </p>
+    <button id="initial" onclick="nextButton('initial','intro', 'firstChoice')">
+      => start
+    </button>
+    <p class="h" id="intro">Intro</p>
+    <button class="h" id="firstChoice">
+      => next button
+    </button>
+
   </section>
   <section class="footer">
     <p>This is the footer.</p>
@@ -23,8 +34,7 @@
 </body>
 
 <!-- Imports -->
-<!-- JS needs the DOM to be loaded before it can do things -->
- <script type="text/javascript" src="scripts/mainscript.js"></script> 
+ <script type="text/javascript" src="scripts/nextButtons.js"></script> 
  <link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </html>
