@@ -36,19 +36,23 @@ function endButton(thisButton, elementName) {
 
 // Same logic as above, but turns off the other choice in a split
 // "otherButton" is the button not chosen
-function choiceToSingleButton(thisButton, elementName, otherButton, followingButton) {
-  nextButton(thisButton, elementName, followingButton);
+function choiceToSingle(thisButton, elementName, otherButton, followingButton) {
+  var button = document.getElementById(thisButton);
+  var element = document.getElementById(elementName);
+  var following = document.getElementById(followingButton);
   var otherChoice = document.getElementById(otherButton);
 
-  // Remove other button
+  button.style.display = "none";
+  element.style.display = "block";
+  following.style.display = "block";
   otherChoice.style.display = "none";
 }
 
 // Same as "choiceToSingleButton" but leads to another split
 // "followingLeft" and "followingRight" are the next two choice buttons
-function choiceToChoiceButton(thisButton, elementName, otherButton, followingLeft, followingRight) {
+function choiceToChoice(thisButton, elementName, otherButton, followingLeft, followingRight) {
   // Start by showing the left path
-  choiceToSingleButton(thisButton, elementName, otherButton, followingLeft);
+  choiceToSingle(thisButton, elementName, otherButton, followingLeft);
 
   // Show the right too!
   var right = document.getElementById(followingRight);
@@ -56,11 +60,30 @@ function choiceToChoiceButton(thisButton, elementName, otherButton, followingLef
 }
 
 // Similar to "choiceToChoiceButton", but without getting rid of a choice
-function singleToChoiceButton(thisButton, elementName, followingLeft, followingRight) {
+function singleToChoice(thisButton, elementName, followingLeft, followingRight) {
   // Start with left
   nextButton(thisButton, elementName, followingLeft);
 
   // Show the right too!
   var right = document.getElementById(followingRight);
   right.style.display = "block";
+}
+
+// Character death?
+// Same as "endButton", changes screen color
+function charDeath(thisButton, elementName) {
+  endButton(thisButton, elementName);
+
+  // Change screen color
+  var html = document.getElementById("html");
+  html.style.backgroundColor = "#ffb8b8";
+}
+
+// Character death due to a choice
+function charDeathChoice(thisButton, elementName, otherButton) {
+  charDeath(thisButton, elementName);
+  var otherChoice = document.getElementById(otherButton);
+
+  // Remove other button
+  otherChoice.style.display = "none";
 }
