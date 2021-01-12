@@ -21,7 +21,9 @@ function startGame(thisButton, elementName, followingButton) {
 
   // Get rid of the instructions
   var instr = document.getElementById("instructions");
+  var initButton = document.getElementById("initial");
   instr.style.display = "none";
+  initButton.style.display = "none";
 }
 
 // Method shows next paragraph, DOES NOT show next button
@@ -38,23 +40,33 @@ function endButton(thisButton, elementName) {
 // "otherButton" is the button not chosen
 function choiceToSingle(thisButton, elementName, otherButton, followingButton) {
   var button = document.getElementById(thisButton);
-  var element = document.getElementById(elementName);
-  var following = document.getElementById(followingButton);
-  var otherChoice = document.getElementById(otherButton);
-
   button.style.display = "none";
+
+  var element = document.getElementById(elementName);
   element.style.display = "block";
+
+  var following = document.getElementById(followingButton);
   following.style.display = "block";
+
+  var otherChoice = document.getElementById(otherButton);
   otherChoice.style.display = "none";
 }
 
 // Same as "choiceToSingleButton" but leads to another split
 // "followingLeft" and "followingRight" are the next two choice buttons
 function choiceToChoice(thisButton, elementName, otherButton, followingLeft, followingRight) {
-  // Start by showing the left path
-  choiceToSingle(thisButton, elementName, otherButton, followingLeft);
+  var button = document.getElementById(thisButton);
+  button.style.display = "none";
 
-  // Show the right too!
+  var element = document.getElementById(elementName);
+  element.style.display = "block";
+
+  var left = document.getElementById(followingLeft);
+  left.style.display = "block";
+
+  var otherChoice = document.getElementById(otherButton);
+  otherChoice.style.display = "none";
+
   var right = document.getElementById(followingRight);
   right.style.display = "block";
 }

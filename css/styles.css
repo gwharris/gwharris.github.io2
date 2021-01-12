@@ -30,7 +30,9 @@ body {
   position: fixed;
   width: 45%;
 }
-.h /* Hidden elements*/ {
+
+/* Initially hide all components */
+p, button {
   display: none;
 }
 

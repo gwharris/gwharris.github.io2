@@ -20,50 +20,51 @@
   <section class="main" id="mainGame">
     <section id="introduction">
       <!-- Intro -->
-      <p id="instructions">
+      <p id="instructions" style="display: block;">
         Welcome to the text adventure game!
         The rules are simple - just choose your own adventure. 
         Please note that refreshing the page will reset the game.
       </p>
-      <button id="initial" onclick="startGame('initial','intro', 'initial2')">
+      <button id="initial" onclick="startGame('initial','intro', 'initial2')" style="display: block;">
         => start
       </button>
-      <p class="h" id="intro">There is nothing but sand here.</p>
-      <button class="h" id="initial2" onclick="singleToChoice('initial2', 'intro2', 'left', 'right')">
+      <p id="intro">There is nothing but sand here.</p>
+      <button id="initial2" onclick="singleToChoice('initial2', 'intro2', 'left', 'right')">
         => next
       </button>
-      <p class="h" id="intro2">The sand shifts.</p>
+      <p id="intro2">The sand shifts.</p>
       <!-- First choice -->
-      <button class="h" id="left" onclick="choiceToChoice('left', 'leftSide', 'right', 'left1', 'left2')">=> continue walking</button>
-      <button class="h" id="right" onclick="choiceToChoice('right', 'rightSide', 'left', 'right1', 'right2')">=> stop</button>
+      <button id="left" onclick="choiceToChoice('left', 'leftSide', 'right', 'left1', 'left2')">=> continue walking</button>
+      <button id="right" onclick="choiceToChoice('right', 'rightSide', 'left', 'right1', 'right2')">=> stop</button>
       <!-- First left choice -->
       <section>
-        <p class="h" id="leftSide">A sand worm attacks! You just barely dodge.<br>
+        <p id="leftSide">A sand worm attacks! You just barely dodge.<br>
           You ready your sword.<br>
           The worm approaches.<br>
         </p>
-        <button class="h" id="left1" onclick="charDeathChoice('left1', 'death1', 'left2')">=> fight</button>
-        <button class="h" id="left2" onclick="choiceToSingle('left2', 'survive1', 'left1', 'toForest')">=> dodge</button>
+        <button id="left1" onclick="charDeathChoice('left1', 'death1', 'left2')">=> fight</button>
+        <button id="left2" onclick="choiceToSingle('left2', 'survive1', 'left1', 'toForest')">=> dodge</button>
           <!-- Left1 -->
-          <p class="h" id="death1">The worm is faster and strikes first. While you are unconscious, it will surely eat you. You have died.</p>
+          <p id="death1">The worm is faster and strikes first. While you are unconscious, it will surely eat you. You have died.</p>
           <!-- Left2 -->
-          <p class="h" id="suvive1">The smarter option. By dodging again, you notice a weak point.<br>
+          <p id="suvive1">The smarter option. By dodging again, you notice a weak point.<br>
           You scavenge for usable parts, then continue on.
           </p>
-          <button class="h" id="toForest">=> next</button>
+          <button id="toForest">=> next</button>
       </section>
       <!-- First right choice -->
       <section>
-        <p class="h" id="rightSide">The shifting intensifies. A sand worm appears.</p>
-        <button class="h" id="right1" onclick="choiceToSingle('right1', 'survive2', 'right2', 'finishHim')">=> defend</button>
-        <button class="h" id="right2">=> hide</button>
+        <p id="rightSide">The shifting intensifies. A sand worm appears.</p>
+        <button id="right1" onclick="choiceToSingle('right1', 'survive2', 'right2', 'finishHim')">=> defend</button>
+        <button id="right2" onclick="charDeath('right2', 'hideDeath', 'right1')">=> hide</button>
           <!-- Right1 -->
-          <p class="h" id="suvive2">You raise your shield at the last moment. The worm crashes into the shield and is momentarily stunned.<br>
+          <p id="suvive2">You raise your shield at the last moment. The worm crashes into the shield and is momentarily stunned.<br>
           </p>
-          <button class="h" id="finishHim">=> finish it</button>
-          <p class="h"> Fatality. You scavenge for usable parts, then continue on.</p>
-          <button class="h" id="toForest">=> next</button>
+          <button id="finishHim">=> finish him</button>
+          <p > Fatality. You scavenge for usable parts, then continue on.</p>
+          <button id="toForest">=> next</button>
           <!-- Right2 -->
+          <p id="hideDeath">You hide behind a nearby rock. It is no use. The sand worm quickly finds you. You have died.</p>
       </section>
 
     </section>
