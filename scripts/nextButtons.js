@@ -15,7 +15,8 @@ function nextButton(thisButton, elementName, followingButton) {
   following.style.display = "block";
 }
 
-// Same as "nextButton" but hides description when player starts
+// Same as "nextButton" but hides description when player FIRST starts
+// Specifically only used once in the beginning of the game
 function startGame(thisButton, elementName, followingButton) {
   nextButton(thisButton, elementName, followingButton);
 
@@ -26,7 +27,8 @@ function startGame(thisButton, elementName, followingButton) {
   initButton.style.display = "none";
 }
 
-// Method shows next paragraph, DOES NOT show next button
+// Method shows next paragraph, but DOES NOT show another button
+// "end" refers to the game hitting an end point (that isn't a death)
 function endButton(thisButton, elementName) {
   var button = document.getElementById(thisButton);
   var element = document.getElementById(elementName);
@@ -36,7 +38,7 @@ function endButton(thisButton, elementName) {
   element.style.display = "block";
 }
 
-// Same logic as above, but turns off the other choice in a split
+// Same logic as above, but turns off the other choice in a button split
 // "otherButton" is the button not chosen
 function choiceToSingle(thisButton, elementName, otherButton, followingButton) {
   var button = document.getElementById(thisButton);
@@ -55,18 +57,11 @@ function choiceToSingle(thisButton, elementName, otherButton, followingButton) {
 // Same as "choiceToSingleButton" but leads to another split
 // "followingLeft" and "followingRight" are the next two choice buttons
 function choiceToChoice(thisButton, elementName, otherButton, followingLeft, followingRight) {
-  var button = document.getElementById(thisButton);
-  button.style.display = "none";
-
-  var element = document.getElementById(elementName);
-  element.style.display = "block";
-
-  var left = document.getElementById(followingLeft);
-  left.style.display = "block";
-
-  var otherChoice = document.getElementById(otherButton);
-  otherChoice.style.display = "none";
-
+  // Use "choiceToSingle" to do everything the same as before,
+  // show the left button first
+  choiceToSingle(thisButton, elementName, otherButton, followingLeft);
+  
+  // Since this is choice to choice, add the right button as well
   var right = document.getElementById(followingRight);
   right.style.display = "block";
 }
