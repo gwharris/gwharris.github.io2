@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en" id="html">
+<head>
+
+  <!-- Metadata -->
+  <title>Game OLD</title>
+  <meta name="author" content="">
+  <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+
+</head>
+<!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<body>
+  <section class="main" id="mainGame">
+    <section id="introduction">
+      <!-- Intro -->
+      <p id="instructions" style="display: block;">
+        Welcome to the text adventure game!
+        The rules are simple - just choose your own adventure. 
+        Please note that refreshing the page will reset the game.
+      </p>
+      <button id="initial" onclick="startGame('initial','intro', 'initial2')" style="display: block;">
+        => start
+      </button>
+      <p id="intro">There is nothing but sand here.</p>
+      <button id="initial2" onclick="singleToChoice('initial2', 'intro2', 'left', 'right')">
+        => next
+      </button>
+      <p id="intro2">The sand shifts.</p>
+      <!-- First choice -->
+      <button id="left" onclick="choiceToChoice('left', 'leftSide', 'right', 'left1', 'left2')">=> continue walking</button>
+      <button id="right" onclick="choiceToChoice('right', 'rightSide', 'left', 'right1', 'right2')">=> stop</button>
+      <!-- First left choice -->
+      <section>
+        <p id="leftSide">A sand worm attacks! You just barely dodge.<br>
+          You ready your sword.<br>
+          The worm approaches.<br>
+        </p>
+        <button id="left1" onclick="charDeathChoice('left1', 'death1', 'left2')">=> fight</button>
+        <button id="left2" onclick="choiceToSingle('left2', 'survive1', 'left1', 'toForest')">=> dodge</button>
+          <!-- Left1 -->
+          <p id="death1">The worm is faster and strikes first. While you are unconscious, it will surely eat you. You have died.</p>
+          <!-- Left2 -->
+          <p id="suvive1">The smarter option. By dodging again, you notice a weak point.<br>
+          You scavenge for usable parts, then continue on.
+          </p>
+          <button id="toForest">=> next</button>
+      </section>
+      <!-- First right choice -->
+      <section>
+        <p id="rightSide">The shifting intensifies. A sand worm appears.</p>
+        <button id="right1" onclick="choiceToSingle('right1', 'survive2', 'right2', 'finishHim')">=> defend</button>
+        <button id="right2" onclick="charDeath('right2', 'hideDeath', 'right1')">=> hide</button>
+          <!-- Right1 -->
+          <p id="suvive2">You raise your shield at the last moment. The worm crashes into the shield and is momentarily stunned.<br>
+          </p>
+          <button id="finishHim">=> finish him</button>
+          <p > Fatality. You scavenge for usable parts, then continue on.</p>
+          <button id="toForest">=> next</button>
+          <!-- Right2 -->
+          <p id="hideDeath">You hide behind a nearby rock. It is no use. The sand worm quickly finds you. You have died.</p>
+      </section>
+
+    </section>
+  </section>
+  <section class="footer">
+    <p style="display: block;">by Graham Harris - 
+    <a href="https://github.com/instagr4h4m" target="_blank">Github</a> - 
+    <a href="https://grahamwharris.com/" target="_blank">Website</a>
+    </p>
+  </section>
+</body>
+
+<!-- Scripts -->
+ <script type="text/javascript" src="scripts/nextButtons.js"></script> 
+
+</html>
+

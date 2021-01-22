@@ -37,7 +37,7 @@ p, button {
 }
 
 /* Buttons */
-button {
+button, a {
   text-decoration: none;
   background-color: inherit;
   color: inherit;
@@ -46,7 +46,7 @@ button {
   font-size: inherit;
   outline: none;
 }
-button:hover {
+button:hover, a:hover {
   text-decoration: underline;
 }
 
@@ -59,4 +59,9 @@ button:hover {
   position: fixed;
   bottom: 0;
   right: 0;
+}
+/* Links in footer */
+a {
+  color: black;
+  animation: welcome 6s; /* smooth page load */
 }
