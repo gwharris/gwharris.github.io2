@@ -16,7 +16,7 @@ function loadJSON(callback) {
 
 // Assign JSON, load load first cell
 let cellData = null; 
-loadJson( (jsonObject) => { 
+loadJSON( (jsonObject) => { 
   cellData = jsonObject; 
   displayCell(1); 
 });
