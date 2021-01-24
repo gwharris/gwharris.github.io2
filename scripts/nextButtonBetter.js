@@ -15,6 +15,7 @@ function loadJSON(callback) {
 }
 
 // Assign JSON, load load first cell
+let currentCell;
 let cellData = null; 
 loadJSON( (jsonObject) => { 
   cellData = jsonObject; 
@@ -48,5 +49,5 @@ document.querySelector('#buttons button').addEventListener('click', (e) => {
 
 // You need some sort of a function to find data in your data store. This uses the filter method on arrays to find the object with the matching IDs. 
 function findCell(cellId) { 
-  return cellData.Cells.filter( cell => cell.CellId == cellId )[0]; 
+  return cellData.Cells.filter(cell => cell.CellId == cellId )[0]; 
 }
