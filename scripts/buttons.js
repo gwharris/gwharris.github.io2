@@ -3,7 +3,7 @@
 var buttons = [
   {
     cellID: "introduction",
-    description: "Welcome to the text adventure game!\nThe rules are simple - just choose your own adventure.\nPlease note that refreshing the page will reset the game.",
+    description: "",
     buttonText: ["=> start"], 
     buttonLinkIDs: ["start"],
     num: 1
@@ -119,7 +119,7 @@ function update(searchID) {
   for (i=0; i<buttons.length; i++) {
     if (searchID == buttons[i].cellID) {
       // Update description
-      document.getElementById("desc").innerHTML = document.getElementById("desc").innerHTML + "<br><br>" + buttons[i].description;
+      document.getElementById("desc").innerHTML = document.getElementById("desc").innerHTML + buttons[i].description + "<br><br>";
 
       // Update buttons
       document.getElementById("button1").innerHTML = buttons[i].buttonText[0];
@@ -140,4 +140,8 @@ function update(searchID) {
   }
 }
 
+// Get rid of welcome message after first click
+document.querySelector('#buttons1 button').addEventListener('click', (e) => { 
+  document.getElementById("welcome").style.display = "none";
+});
 
