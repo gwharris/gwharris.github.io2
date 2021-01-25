@@ -1,8 +1,8 @@
-# Get ready for adventure!
+# Get ready for an adventure!
 
 <b>Code and story by Graham Harris</b>
 
-## Welcome!
+## Welcome to Unafraid!
 Start your journey in a strange land, filled with magical creatures and deadly adversaries. Will you make it to the end or will some ill misfortune befall you?
 
 ## TODO
