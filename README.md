@@ -1,4 +1,4 @@
-# Simple Game
+# Simple Game ⚔️
 
 <b>Code and story by Graham Harris</b>\
 \
