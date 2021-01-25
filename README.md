@@ -6,7 +6,7 @@
 Start your journey in a strange land, filled with magical creatures and deadly adversaries. Will you make it to the end or will some ill misfortune befall you?
 
 ## TODO
-<b>Project incomplete, issues to resolve below:.</b>
+<b>Project incomplete, issues to resolve below:</b>
 <ul>
   <li>Continue writing story</li>
   <li>GitHub web hosting issues? There's a lag when uploading files</li>
