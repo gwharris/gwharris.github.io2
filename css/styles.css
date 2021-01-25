@@ -32,9 +32,9 @@ body {
 }
 
 /* Initially hide all components */
-p, button {
+/* p, button {
   display: none;
-}
+} */
 
 /* Buttons */
 button, a {

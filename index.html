@@ -17,10 +17,16 @@
 </head>
 <!-- –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <body>
-  <section id="game">
+  <section class="main" id="game">
     <div id="description-text">
+      <p id="desc"></p> <!-- Text description -->
     </div>
     <div id="buttons">
+      <button id="button1"></button> <!-- Button 1 -->
+      <button id="button2"></button> <!-- Button 2, if there is one -->
+    </div>
+    <div> <!-- Contains hidden data, style="display: none;" -->
+      <p id="linkIDs"></p>
     </div>
   </section>
   <section class="footer">
@@ -31,8 +37,8 @@
   </section>
 </body>
 
-<!-- Scripts -->
- <script type="text/javascript" src="scripts/nextButtonBetter.js"></script> 
+  <!-- Scripts -->
+  <script type="text/javascript" src="scripts/buttons.js"></script>
 
 </html>
 
