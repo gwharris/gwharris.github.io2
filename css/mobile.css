@@ -1,7 +1,7 @@
 /* Stylings for mobile users */
 
  /* Responsive layout */
-@media screen and (max-width: 300px) {
+@media only screen and (max-width: 400px) {
   .main {   
     width: 100%;
     padding-bottom: 20px;
@@ -9,7 +9,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-snap-align: start;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
