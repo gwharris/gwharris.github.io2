@@ -3,12 +3,13 @@
  /* Responsive layout */
 @media screen and (max-width: 300px) {
   .main {   
-    width: auto;
+    width: 100%;
     padding-bottom: 20px;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-snap-align: start;
+    font-size: 14px;
   }
 }
 
