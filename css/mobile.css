@@ -9,7 +9,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-snap-align: start;
-    font-size: 12px;
+    font-size: 14px;
   }
   button {
     display: flex;
