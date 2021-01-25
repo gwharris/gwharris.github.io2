@@ -115,11 +115,12 @@ function update(searchID) {
     if (searchID == buttons[i].cellID) {
       // Update description
       document.getElementById("desc").innerHTML = document.getElementById("desc").innerHTML + "<br><br>" + buttons[i].description;
+
       // Update buttons
       document.getElementById("button1").innerHTML = buttons[i].buttonText[0];
-      if (buttons[i].buttonLinkIDs.length == 2) {
-        document.getElementById("button2").innerHTML = buttons[i].buttonText[1];
-      }
+      if (buttons[i].buttonLinkIDs.length == 2) document.getElementById("button2").innerHTML = buttons[i].buttonText[1];
+      else document.getElementById("button2").innerHTML = "";
+      
       // Update hidden element
       document.getElementById("linkIDs").innerHTML = buttons[i].buttonLinkIDs;
       didTheyDie = buttons[i].buttonLinkIDs;
