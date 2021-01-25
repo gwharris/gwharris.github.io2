@@ -11,5 +11,9 @@
     scroll-snap-align: start;
     font-size: 12px;
   }
+  button {
+    display: block;
+    position: absolute;
+  }
 }
 
