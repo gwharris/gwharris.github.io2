@@ -10,11 +10,10 @@
     scroll-snap-type: x mandatory;
     scroll-snap-align: start;
     font-size: 12px;
-    position: fixed;
   }
   button {
     display: flex;
-    position: fixed;
+    position: static;
   }
 }
 
