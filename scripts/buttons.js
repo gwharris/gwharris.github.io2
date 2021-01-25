@@ -82,6 +82,9 @@ var buttons = [
   }
 ]
 
+// Array of paths that lead to death
+var deathArray = ["leftleft", "rightright"]
+
 // Find elements
 document.getElementById("desc").innerHTML = buttons[0].description;;
 document.getElementById("button1").innerHTML = buttons[0].buttonText[0];
@@ -101,19 +104,13 @@ document.querySelector('#buttons button').addEventListener('click', (e) => {
   else {
     update(ids[0]);
   }
-  // If the choice led to death...
-  if (ids[0] == "death") {
-    document.getElementById("button1").innerHTML = "";
-    document.getElementById("button2").innerHTML = "";
-    document.getElementById("linkIDs").innerHTML = "game over";
-    html.style.backgroundColor = "#ffb8b8";
-  }
 });
 
 // Function that updates the screen information
 // when a button is pressed.
 // SearchID is the ID to update with
 function update(searchID) {
+  var didTheyDie = "";
   for (i=0; i<buttons.length; i++) {
     if (searchID == buttons[i].cellID) {
       // Update description
@@ -125,6 +122,14 @@ function update(searchID) {
       }
       // Update hidden element
       document.getElementById("linkIDs").innerHTML = buttons[i].buttonLinkIDs;
+      didTheyDie = buttons[i].buttonLinkIDs;
     }
+  }
+  // If the choice led to death...
+  if (didTheyDie == "death") {
+    document.getElementById("button1").innerHTML = "";
+    document.getElementById("button2").innerHTML = "";
+    document.getElementById("linkIDs").innerHTML = "game over";
+    html.style.backgroundColor = "#ffb8b8";
   }
 }
