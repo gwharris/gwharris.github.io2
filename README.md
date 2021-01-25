@@ -6,6 +6,4 @@ Project incomplete - description coming soon.
 \
 TODO - write storyboard
 \
-TODO - fix JSON? Give up?
-\
-TODO - Get buttons to show correct info
+TODO - fix death animation and extra buttons
