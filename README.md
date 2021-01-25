@@ -1,6 +1,6 @@
-# Simple Game ⚔️
+# Get ready for adventure!
 
-<b>Code and story by Graham Harris</b>\
+<b>Code and story by Graham Harris</b>
 
 ## Welcome!
 Start your journey in a strange land, filled with magical creatures and deadly adversaries. Will you make it to the end or will some ill misfortune befall you?
