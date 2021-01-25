@@ -8,6 +8,7 @@ var buttons = [
     buttonLinkIDs: ["start"],
     num: 1
   },
+  // ------------ START OF DESERT ------------
   {
     cellID: "start",
     description: "There is nothing but sand here.",
@@ -71,10 +72,11 @@ var buttons = [
     buttonLinkIDs: ["death"],
     num: 10
   },
+  // ------------ START OF FOREST ------------
 
 
 
-
+  // ------------ CHARACTER DEATH ------------
   {
     cellID: "death",
     description: "",
