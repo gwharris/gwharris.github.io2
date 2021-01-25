@@ -96,7 +96,7 @@ document.querySelector('#buttons button').addEventListener('click', (e) => {
   const buttonClicked = e.target;
   // Gather IDs to split by
   var ids_unsplit = document.getElementById("linkIDs").innerHTML;
-  var ids = ids_unsplit.split(",")
+  var ids = ids_unsplit.split(",");
   // Determine which button was pressed and where to index
   if (buttonClicked.getAttribute("id") == "button2") {
     update(ids[1]);
@@ -110,7 +110,7 @@ document.querySelector('#buttons button').addEventListener('click', (e) => {
 // when a button is pressed.
 // SearchID is the ID to update with
 function update(searchID) {
-  var didTheyDie = "";
+  var didTheyDie = ""; // Keeps track of character death
   for (i=0; i<buttons.length; i++) {
     if (searchID == buttons[i].cellID) {
       // Update description
