@@ -98,7 +98,7 @@ document.querySelector('#buttons button').addEventListener('click', (e) => {
   var ids_unsplit = document.getElementById("linkIDs").innerHTML;
   var ids = ids_unsplit.split(",");
   // Determine which button was pressed and where to index
-  if (buttonClicked.getAttribute("id") == "button2") {
+  if (buttonClicked.getAttribute('id') == "button2") {
     update(ids[1]);
   }
   else {
@@ -120,7 +120,7 @@ function update(searchID) {
       document.getElementById("button1").innerHTML = buttons[i].buttonText[0];
       if (buttons[i].buttonLinkIDs.length == 2) document.getElementById("button2").innerHTML = buttons[i].buttonText[1];
       else document.getElementById("button2").innerHTML = "";
-      
+
       // Update hidden element
       document.getElementById("linkIDs").innerHTML = buttons[i].buttonLinkIDs;
       didTheyDie = buttons[i].buttonLinkIDs;
