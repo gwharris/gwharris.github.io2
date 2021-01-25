@@ -76,48 +76,55 @@ var buttons = [
   {
     cellID: "death",
     description: "",
-    buttonText: [""], 
-    buttonLinkIDs: null,
+    buttonText: ["", ""], 
+    buttonLinkIDs: ["", ""],
     num: 0
   }
 ]
 
 // Find elements
-var desc = document.getElementById("desc").innerHTML;
-var button1 = document.getElementById("button1").innerHTML;
-var button2 = document.getElementById("button2").innerHTML;
-var linkIDs = document.getElementById("linkIDs").innerHTML;
+document.getElementById("desc").innerHTML = buttons[0].description;;
+document.getElementById("button1").innerHTML = buttons[0].buttonText[0];
+document.getElementById("button2").innerHTML = "";
+document.getElementById("linkIDs").innerHTML = buttons[0].buttonLinkIDs;
 
-// Set the introduction at the beginning
-desc = buttons[0].description;
-button1 = buttons[0].buttonText[0];
-linkIDs = buttons[0].buttonLinkIDs[0];
-
-// Event 
+// Click event 
 document.querySelector('#buttons button').addEventListener('click', (e) => { 
-  const buttonClicked = e.target; 
-  const nextCellId = buttonClicked.getAttribute(buttonLinkIDs); 
-  displayCell(nextCellId); 
+  const buttonClicked = e.target;
+  // Gather IDs to split by
+  var ids_unsplit = document.getElementById("linkIDs").innerHTML;
+  var ids = ids_unsplit.split(",")
+  // Determine which button was pressed and where to index
+  if (buttonClicked.getAttribute("id") == "button2") {
+    update(ids[1]);
+  }
+  else {
+    update(ids[0]);
+  }
+  // If the choice led to death...
+  if (ids[0] == "death") {
+    document.getElementById("button1").innerHTML = "";
+    document.getElementById("button2").innerHTML = "";
+    document.getElementById("linkIDs").innerHTML = "game over";
+    html.style.backgroundColor = "#ffb8b8";
+  }
 });
 
-
-// function next() {
-//   var current = document.getElementById("linkIDs");
-//   if (current.length == 0)
-//     html.style.backgroundColor = "#ffb8b8";
-//   switch(current.length) {
-//     case(2): findNextID(current[1], button2, 1);
-//     case(1): findNextID(current[0], button1, 0);
-//   }
-// }
-
-// // id is the ID to search for, 
-// // buttonName is the button to find,
-// // pos is the position the element is in in the array
-// function findNextID(id, buttonName, pos) {
-//   for (i=0; i<buttons.length; i++) {
-//     if (id === buttons[i].cellID) {
-//       buttonName = buttons[i].buttonText[pos];
-//     }
-//   }
-// }
+// Function that updates the screen information
+// when a button is pressed.
+// SearchID is the ID to update with
+function update(searchID) {
+  for (i=0; i<buttons.length; i++) {
+    if (searchID == buttons[i].cellID) {
+      // Update description
+      document.getElementById("desc").innerHTML = document.getElementById("desc").innerHTML + "<br><br>" + buttons[i].description;
+      // Update buttons
+      document.getElementById("button1").innerHTML = buttons[i].buttonText[0];
+      if (buttons[i].buttonLinkIDs.length == 2) {
+        document.getElementById("button2").innerHTML = buttons[i].buttonText[1];
+      }
+      // Update hidden element
+      document.getElementById("linkIDs").innerHTML = buttons[i].buttonLinkIDs;
+    }
+  }
+}
