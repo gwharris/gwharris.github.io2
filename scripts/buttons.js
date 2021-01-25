@@ -25,7 +25,7 @@ var buttons = [
   },
   {
     cellID: "left",
-    description: "A sand worm attacks! You just barely dodge.\nYou ready your sword.\nThe worm approaches.",
+    description: "A sand worm attacks! You just barely dodge. You ready your sword. The worm approaches.",
     buttonText: ["=> fight", "=> dodge"], 
     buttonLinkIDs: ["leftleft", "leftright"],
     num: 4
@@ -39,7 +39,7 @@ var buttons = [
   },
   {
     cellID: "leftright",
-    description: "The smarter option. By dodging again, you notice a weak point.\nYou scavenge for usable parts, then continue on.",
+    description: "The smarter option. By dodging again, you notice a weak point and strike, killing the beast. You scavenge for usable parts, then continue on.",
     buttonText: ["=> next"], 
     buttonLinkIDs: ["forest"],
     num: 6
