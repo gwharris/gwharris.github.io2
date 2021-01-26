@@ -11,9 +11,9 @@
     scroll-snap-align: start;
     font-size: 14px;
   }
-  button {
+  #button1, #button2 {
     display: flex;
-    position: static;
+    position: absolute;
   }
 }
 
