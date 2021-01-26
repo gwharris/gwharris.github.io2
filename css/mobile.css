@@ -5,9 +5,6 @@
     width: 300px;
     padding-bottom: 15px;
     display: inline-block;
-    scroll-snap-type: x mandatory;
-    scroll-snap-align: start;
-    overflow: auto;
     font-size: 14px;
     word-wrap: break-word;
     height: 475px;

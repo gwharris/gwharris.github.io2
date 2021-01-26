@@ -29,6 +29,9 @@ body {
   height: 80%;
   position: fixed;
   width: 500px;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
 }
 
 /* Scollable section */

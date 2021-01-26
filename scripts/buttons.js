@@ -85,19 +85,67 @@ var buttons = [
     cellID: "forest4",
     description: "A troll sits in a clearing ahead, with its gaze fixated on you. It is covered in moss and dirt. Though it's sitting, it must be twice your height.",
     buttonText: ["=> draw sword", "=> speak"], 
-    buttonLinkIDs: ["endForNow","endForNow"]
+    buttonLinkIDs: ["f-left","f-right"]
   },
   {
     cellID: "f-left",
-    description: "",
+    description: "You draw your sword. As you move, the troll picks up a large rock.",
+    buttonText: ["=> approach"], 
+    buttonLinkIDs: ["appr"]
+  },
+  {
+    cellID: "appr",
+    description: "You begin to move, but the troll throws the rock at an incredible speed. There is no way to dodge in time. You have died.",
     buttonText: [""], 
-    buttonLinkIDs: [""]
+    buttonLinkIDs: ["death"]
   },
   {
     cellID: "f-right",
-    description: "",
+    description: 'Before you utter a word, the troll stands. "Human. What is your quest?" it mumbles. It reaches for a large rock.',
+    buttonText: ['=> "to reach the riverbank"', '=> "seek the holy grail"'], 
+    buttonLinkIDs: ["riddle1", "riddle1"]
+  },
+  {
+    cellID: "riddle1",
+    description: 'The troll laughs. "Then you must answer some riddles to pass."',
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["riddle2"]
+  },
+  {
+    cellID: "riddle2",
+    description: '"You answer, though I never ask."',
+    buttonText: ["=> a phone","=> a riddle"], 
+    buttonLinkIDs: ["correct1", "wrong"]
+  },
+  {
+    cellID: "wrong",
+    description: "In a surprisingly swift motion, the troll throws the rock. Your last though is that you must have gotten it wrong. You have died.",
     buttonText: [""], 
-    buttonLinkIDs: [""]
+    buttonLinkIDs: ["death"]
+  },
+  {
+    cellID: "correct1",
+    description: '"Correct!" the troll replies. "My wife and I have six daughters. Each of our daughters has one brother. How large is our family?"',
+    buttonText: ["=> fourteen", "=> six"], 
+    buttonLinkIDs: ["wrong", "correct2"]
+  },
+  {
+    cellID: "correct2",
+    description: '"Correct!" You are unsure if the troll is pleased or not. "I am god, planet, and metal. Who am I?"',
+    buttonText: ["=> jupiter","=> mercury"], 
+    buttonLinkIDs: ["wrong","correct3"]
+  },
+  {
+    cellID: "correct3",
+    description: 'The troll chuckles. "You are clever for a human. The riverbank lies behind me. Next time, you shall not be so lucky."',
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["forest5"]
+  },
+  {
+    cellID: "forest5",
+    description: "The troll moves, revealing a path behind him. You walk with your eyes on the troll until he is out of sight.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["endForNow"]
   },
 
   // ------------ CHARACTER DEATH ------------
@@ -148,7 +196,7 @@ function update(searchID) {
   for (i=0; i<buttons.length; i++) {
     if (searchID == buttons[i].cellID) {
       // Update description
-      document.getElementById("desc").innerHTML = document.getElementById("desc").innerHTML + buttons[i].description + "<br><br>";
+      document.getElementById("desc").innerHTML = buttons[i].description + "<br><br>" + document.getElementById("desc").innerHTML ;
 
       // Update buttons
       document.getElementById("button1").innerHTML = buttons[i].buttonText[0];
