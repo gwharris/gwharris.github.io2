@@ -19,6 +19,9 @@
   #button1 {
     padding-bottom: 10px;
   }
+  .footer {
+    position: fixed;
+  }
 
 }
 
