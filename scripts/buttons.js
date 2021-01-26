@@ -119,7 +119,7 @@ var buttons = [
   },
   {
     cellID: "wrong",
-    description: "In a surprisingly swift motion, the troll throws the rock. Your last though is that you must have gotten it wrong. You have died.",
+    description: "In a surprisingly swift motion, the troll throws the rock. Your last thought is that you must have gotten it wrong. You have died.",
     buttonText: [""], 
     buttonLinkIDs: ["death"]
   },
