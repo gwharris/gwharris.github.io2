@@ -59,7 +59,7 @@ button, a {
 button:hover, a:hover {
   text-decoration: underline;
 }
-button:active {
+button:after {
   text-decoration: none;
 }
 
