@@ -12,8 +12,8 @@
     font-size: 14px;
   }
   #button1, #button2 {
-    display: block;
-    position: absolute;
+    display: flex;
+    position: sticky;
   }
 }
 
