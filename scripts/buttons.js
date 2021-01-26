@@ -126,7 +126,7 @@ var buttons = [
   {
     cellID: "correct1",
     description: '"Correct!" the troll replies. "My wife and I have six daughters. Each of our daughters has one brother. How large is our family?"',
-    buttonText: ["=> fourteen", "=> six"], 
+    buttonText: ["=> fourteen", "=> nine"], 
     buttonLinkIDs: ["wrong", "correct2"]
   },
   {
