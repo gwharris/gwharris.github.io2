@@ -1,7 +1,9 @@
 /* Stylings for mobile users */
 
- /* Responsive layout */
 @media only screen and (max-width: 400px) {
+  html {
+    animation: welcome 0s; /* Remove animation from mobile */
+  }
   .main {   
     width: 100%;
     padding-bottom: 20px;
