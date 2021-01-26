@@ -13,7 +13,8 @@
   }
   #button1, #button2 {
     display: flex;
-    position: sticky;
+    position: absolute;
+    height: 100%;
   }
 }
 
