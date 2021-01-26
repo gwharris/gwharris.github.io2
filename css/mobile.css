@@ -12,7 +12,7 @@
     font-size: 14px;
   }
   #button1, #button2 {
-    display: flex;
+    display: block;
     position: absolute;
   }
 }
