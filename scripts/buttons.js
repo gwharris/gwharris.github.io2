@@ -5,84 +5,95 @@ var buttons = [
     cellID: "introduction",
     description: "",
     buttonText: ["=> start"], 
-    buttonLinkIDs: ["start"],
-    num: 1
+    buttonLinkIDs: ["start"]
   },
   // ------------ START OF DESERT ------------
   {
     cellID: "start",
     description: "There is nothing but sand here.",
     buttonText: ["=> next"], 
-    buttonLinkIDs: ["start2"],
-    num: 2
+    buttonLinkIDs: ["start2"]
   },
   {
     cellID: "start2",
     description: "The sand shifts.",
     buttonText: ["=> continue walking", "=> stop"], 
-    buttonLinkIDs: ["left", "right"],
-    num: 3
+    buttonLinkIDs: ["left", "right"]
   },
   {
     cellID: "left",
     description: "A sand worm attacks! You just barely dodge. You ready your sword. The worm approaches.",
     buttonText: ["=> fight", "=> dodge"], 
-    buttonLinkIDs: ["leftleft", "leftright"],
-    num: 4
+    buttonLinkIDs: ["leftleft", "leftright"]
   },
   {
     cellID: "leftleft",
     description: "The worm is faster and strikes first. While you are unconscious, it will surely eat you. You have died.",
     buttonText: [""], 
-    buttonLinkIDs: ["death"],
-    num: 5
+    buttonLinkIDs: ["death"]
   },
   {
     cellID: "leftright",
     description: "The smarter option. By dodging again, you notice a weak point and strike, killing the beast. You scavenge for usable parts, then continue on.",
     buttonText: ["=> next"], 
-    buttonLinkIDs: ["forest"],
-    num: 6
+    buttonLinkIDs: ["forest"]
   },
   {
     cellID: "right",
     description: "The shifting intensifies. A sand worm appears.",
     buttonText: ["=> defend", "=> hide"], 
-    buttonLinkIDs: ["rightleft", "rightright"],
-    num: 5
+    buttonLinkIDs: ["rightleft", "rightright"]
   },
   {
     cellID: "rightleft",
     description: "You raise your shield at the last moment. The worm crashes into the shield and is momentarily stunned.",
     buttonText: ["=> finish him"], 
-    buttonLinkIDs: ["finishHim"],
-    num: 8
+    buttonLinkIDs: ["finishHim"]
   },
   {
     cellID: "finishHim",
     description: "Fatality. You scavenge for usable parts, then continue on.",
     buttonText: ["=> next"], 
-    buttonLinkIDs: ["forest"],
-    num: 9
+    buttonLinkIDs: ["forest"]
   },
   {
     cellID: "rightright",
     description: "You hide behind a nearby rock. It is no use. The sand worm quickly finds you. You have died.",
     buttonText: [""], 
-    buttonLinkIDs: ["death"],
-    num: 10
+    buttonLinkIDs: ["death"]
   },
   // ------------ START OF FOREST ------------
-
-
+  {
+    cellID: "forest",
+    description: "The edge of the desert is close. A forest looms ahead.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["forest2"]
+  },
+  {
+    cellID: "forest2",
+    description: "You arrive at the forest's edge. Dangers are sure to be around every corner. You proceed with caution.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["forest3"]
+  },
+  {
+    cellID: "forest3",
+    description: "You are being watched.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["forest4"]
+  },
+  {
+    cellID: "forest4",
+    description: "A troll sits in a clearing ahead, with its gaze fixated on you. It is covered in moss and dirt. Though it's sitting, it must be twice your height.",
+    buttonText: ["=> draw sword", "=> speak"], 
+    buttonLinkIDs: ["f-left","f-right"]
+  },
 
   // ------------ CHARACTER DEATH ------------
   {
     cellID: "death",
     description: "",
     buttonText: ["", ""], 
-    buttonLinkIDs: ["", ""],
-    num: 0
+    buttonLinkIDs: ["", ""]
   }
 ]
 
