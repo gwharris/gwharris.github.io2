@@ -13,8 +13,7 @@
   }
   #button1, #button2 {
     display: flex;
-    position: absolute;
-    height: 100%;
+    position: relative;
   }
 }
 
