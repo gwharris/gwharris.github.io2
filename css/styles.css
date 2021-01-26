@@ -50,7 +50,8 @@ button, a {
   text-align: left;
   border: none;
   font-size: inherit;
-  outline: none;
+  outline: 0px !important;
+  box-shadow: none !important;
 }
 button:hover, a:hover {
   text-decoration: underline;
