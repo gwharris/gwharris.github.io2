@@ -31,6 +31,12 @@ body {
   width: 500px;
 }
 
+/* Scollable section */
+.scroll {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 /* Initially hide all components */
 /* p, button {
   display: none;
