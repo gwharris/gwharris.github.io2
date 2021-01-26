@@ -85,7 +85,19 @@ var buttons = [
     cellID: "forest4",
     description: "A troll sits in a clearing ahead, with its gaze fixated on you. It is covered in moss and dirt. Though it's sitting, it must be twice your height.",
     buttonText: ["=> draw sword", "=> speak"], 
-    buttonLinkIDs: ["f-left","f-right"]
+    buttonLinkIDs: ["endForNow","endForNow"]
+  },
+  {
+    cellID: "f-left",
+    description: "",
+    buttonText: [""], 
+    buttonLinkIDs: [""]
+  },
+  {
+    cellID: "f-right",
+    description: "",
+    buttonText: [""], 
+    buttonLinkIDs: [""]
   },
 
   // ------------ CHARACTER DEATH ------------
@@ -94,6 +106,12 @@ var buttons = [
     description: "",
     buttonText: ["", ""], 
     buttonLinkIDs: ["", ""]
+  },
+  {
+    cellID: "endForNow",
+    description: "Thank you for playing! This game is still in development, more content will be added soon.",
+    buttonText: [""], 
+    buttonLinkIDs: [""]
   }
 ]
 
