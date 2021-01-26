@@ -13,7 +13,10 @@
   #button1, #button2 {
     display: block;
     position: relative;
-    font-size: 18px;
+    font-size: 14px;
+  }
+  #button1 {
+    padding-bottom: 10px;
   }
 }
 
