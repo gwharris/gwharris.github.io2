@@ -9,7 +9,7 @@
     scroll-snap-align: start;
     font-size: 14px;
     word-wrap: break-word;
-    height: 70%;
+    height: 450px;
   }
   #button1, #button2 {
     display: block;
