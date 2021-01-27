@@ -9,6 +9,9 @@
     word-wrap: break-word;
     height: 475px;
   }
+  button:hover, a:hover {
+    text-decoration: none;
+  }
   #button1, #button2 {
     display: block;
     position: relative;
