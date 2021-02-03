@@ -145,7 +145,128 @@ var buttons = [
     cellID: "forest5",
     description: "The troll moves, revealing a path behind him. You walk with your eyes on the troll until he is out of sight.",
     buttonText: ["=> next"], 
+    buttonLinkIDs: ["river1"]
+  },
+  // ------------ START OF RIVER ------------
+  {
+    cellID: "river1",
+    description: "The forest is vast.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["river2"]
+  },
+  {
+    cellID: "river2",
+    description: "The trees begin to thin. There may be a clearing ahead.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["river3"]
+  },
+  {
+    cellID: "river3",
+    description: "Almost there. The rushing of water is quiet at first, progressively growing louder.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["river4"]
+  },
+  {
+    cellID: "river4",
+    description: "The river is ahead. The crystal-clear water shimmers in deep hues.",
+    buttonText: ["=> cross river", "=> walk along riverbank"], 
+    buttonLinkIDs: ["rivDeath", "meetSiren"]
+  },
+  {
+    cellID: "rivDeath",
+    description: "You get halfway through when a sudden rush of water surges toward you. As you sink below, a faint, mischievous laugh can be heard. You have died.",
+    buttonText: [""], 
+    buttonLinkIDs: ["death"]
+  },
+  {
+    cellID: "meetSiren",
+    description: "The water seems to follow you up the riverbank. Strange.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["meetSiren2"]
+  },
+  {
+    cellID: "meetSiren2",
+    description: "The water swirls upward. It forms a beautiful face with a charming smile. A water nymph, perhaps?",
+    buttonText: ["=> speak", "=> wait"], 
+    buttonLinkIDs: ["sirenTempt", "waitTempt"]
+  },
+  {
+    cellID: "sirenTempt",
+    description: 'The nymph listens to your plight. "What you seek is across my shore," it offers, "Allow me to grant you safe passage."',
+    buttonText: ["=> cross river", "=> politely decline"], 
+    buttonLinkIDs: ["rivDeath", "sirenTempt2"]
+  },
+  {
+    cellID: "waitTempt",
+    description: '"Hello traveller," the nymph begins, "I know what you seek. Do you intend to cross? Let me help."',
+    buttonText: ["=> cross river", "=> decline"], 
+    buttonLinkIDs: ["rivDeath", "sirenTempt2"]
+  },
+  {
+    cellID: "sirenTempt2",
+    description: '"Not to worry," the nymph replies. "There is a longer route. The entrance to the crystal caves lies ahead. Shall we go?"',
+    buttonText: ["=> decline again", "=> follow"], 
+    buttonLinkIDs: ["declineSiren", "followSiren"]
+  },
+  {
+    cellID: "declineSiren",
+    description: '"Fine then." The nymph seems... upset? You walk aimlessly up the river for a while.',
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["declineSiren2"]
+  },
+  {
+    cellID: "declineSiren2",
+    description: "The cave lies at the origin of the river, but the entrance is locked! Searching for a key proves too arduous a task. Even if a creature does not find you, hunger surely will. You have died.",
+    buttonText: [""], 
+    buttonLinkIDs: ["death"]
+  },
+  {
+    cellID: "followSiren",
+    description: 'The nymph seems... happy? As you walk along the riverbank, it follows from in the water. It is a rather joyful creature.',
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["followSiren2"]
+  },
+  {
+    cellID: "followSiren2",
+    description: '"It is strange for such an attractive mortal to travel alone. Do you not want for company?" it invites.',
+    buttonText: ["=> flirt back", "=> walk in silence"], 
+    buttonLinkIDs: ["flirt!", "noFlirt"]
+  },
+  {
+    cellID: "flirt!",
+    description: 'You flirt back. The nymph giggles.',
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["flirt2!"]
+  },
+  {
+    cellID: "flirt2!",
+    description: 'You reach the origin of the river. A locked door sits at the mouth of a cave. The nymph reaches into the water below.',
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["flirt3!"]
+  },
+  {
+    cellID: "flirt3!",
+    description: '"Thank you for accompanying me," the nymph smiles, "If you survive the horrors within, I should like to see you again." The nymph pulls the key from the water and unlocks the door.',
+    buttonText: ["=> enter cave"], 
     buttonLinkIDs: ["endForNow"]
+  },
+  {
+    cellID: "noFlirt",
+    description: "The nymph sighs. You reach the origin of the river. A locked door sits at the mouth of a cave.",
+    buttonText: ["=> next"], 
+    buttonLinkIDs: ["noFlirt2"]
+  },
+  {
+    cellID: "noFlirt2",
+    description: '"If only you had the key!" The nymph smirks and disappears.',
+    buttonText: ["=> look for key"], 
+    buttonLinkIDs: ["searchDeath"]
+  },
+  {
+    cellID: "searchDeath",
+    description: "You don't know where to start looking. Searching for a key proves too arduous a task. Even if a creature does not find you, hunger surely will. You have died.",
+    buttonText: [""], 
+    buttonLinkIDs: ["death"]
   },
 
   // ------------ CHARACTER DEATH ------------
