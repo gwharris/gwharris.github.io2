@@ -38,6 +38,12 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.death {
+  background: -webkit-linear-gradient(black, #ffb8b8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Buttons */
 button, a {
   text-decoration: none;
