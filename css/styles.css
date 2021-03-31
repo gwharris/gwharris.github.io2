@@ -32,18 +32,11 @@ body {
   overflow: auto;
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
+  /* Add fading text */
+  background: -webkit-linear-gradient(black, rgb(236, 225, 200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-
-/* Scollable section */
-.scroll {
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-
-/* Initially hide all components */
-/* p, button {
-  display: none;
-} */
 
 /* Buttons */
 button, a {
