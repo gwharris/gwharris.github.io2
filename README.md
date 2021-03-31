@@ -12,9 +12,8 @@ The game is hosted [here](https://gwharris.github.io/).
 ## TODO
 <b>Project incomplete, issues to resolve below:</b>
 <ul>
-  <li>Continue writing story</li>
-  <li>GitHub web hosting issues? There's a lag when uploading files</li>
-  <li>Fix phone CSS!!!</li>
-  <li>Fix red screen, will only show up after 5 seconds because of the smooth page load?</li>
-  <li>Dark mode?</li>
+  <li>Continue writing story.</li>
+  <li>Color gradient doesn't change when player dies.</li>
+  <li>Fix phone CSS!</li>
+  <li>Add a dark mode?</li>
 </ul>
