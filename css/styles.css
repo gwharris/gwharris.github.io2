@@ -33,6 +33,9 @@ body {
   scroll-snap-type: x mandatory;
   scroll-snap-align: start;
   /* Add fading text */
+  background: linear-gradient(#000000, rgb(236, 225, 200));
+  background-clip: text;
+  color: transparent;
   background: -webkit-linear-gradient(black, rgb(236, 225, 200));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -42,6 +45,9 @@ body {
   background: -webkit-linear-gradient(black, #ffb8b8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background: linear-gradient(#000000, #ffb8b8);
+  background-clip: text;
+  color: transparent;
 }
 
 /* Buttons */
