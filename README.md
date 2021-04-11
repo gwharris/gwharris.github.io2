@@ -15,3 +15,4 @@ The game is hosted [here](https://gwharris.github.io/).
 * Color gradient doesn't change when player dies.
 * Fix phone CSS!
 * Add a dark mode?
+* Buttons don't work on mobile?
