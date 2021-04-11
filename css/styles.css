@@ -48,7 +48,6 @@ body {
 
 /* Buttons */
 button, a {
-  color: black;
   text-decoration: none;
   background-color: inherit;
   color: inherit;
@@ -78,6 +77,5 @@ button:after {
 }
 /* Links in footer */
 a {
-  color: black;
   animation: welcome 5s; /* smooth page load */
 }
