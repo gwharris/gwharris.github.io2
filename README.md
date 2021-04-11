@@ -11,7 +11,7 @@ The game is hosted [here](https://gwharris.github.io/).
 
 ## TODO
 **Project incomplete, issues to resolve below:**
-*Continue writing story.
-*Color gradient doesn't change when player dies.
-*Fix phone CSS!
-*Add a dark mode?
+* Continue writing story.
+* Color gradient doesn't change when player dies.
+* Fix phone CSS!
+* Add a dark mode?
