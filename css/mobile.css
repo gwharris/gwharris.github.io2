@@ -8,6 +8,9 @@
     font-size: 14px;
     word-wrap: break-word;
     height: 475px;
+    background: -webkit-linear-gradient(black, rgb(236, 225, 200));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
   button:hover, a:hover {
     text-decoration: none;
@@ -16,6 +19,7 @@
     display: block;
     position: relative;
     font-size: 14px;
+    color: black;
   }
   #button1 {
     padding-bottom: 15px;
