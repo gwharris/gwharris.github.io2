@@ -21,7 +21,7 @@
     text-decoration: none;
   }
   #button1, #button2 {
-    display: block;
+    /* display: block; */
     position: relative;
     font-size: 14px;
   }
