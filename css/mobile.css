@@ -11,11 +11,6 @@
     background: -webkit-linear-gradient(black, rgb(236, 225, 200));
     -webkit-background-clip: text;
   }
-  button {
-    display: block;
-    color: black;
-  }
-
   button:hover, a:hover {
     text-decoration: none;
   }
