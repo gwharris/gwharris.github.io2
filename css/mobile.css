@@ -9,6 +9,9 @@
     word-wrap: break-word;
     height: 475px;
     background: -webkit-linear-gradient(black, rgb(236, 225, 200));
+    background: linear-gradient(black, rgb(236, 225, 200));
+    background: -moz-linear-gradient(black, rgb(236, 225, 200));
+    background: -o-linear-gradient(black, rgb(236, 225, 200));
     -webkit-background-clip: text;
   }
   button:hover, a:hover {
