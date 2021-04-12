@@ -81,6 +81,7 @@ button:after {
   right: 0;
 }
 /* Links in footer */
+/* is this necessary? */
 a {
   animation: welcome 5s; /* smooth page load */
 }
