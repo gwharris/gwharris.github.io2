@@ -8,13 +8,12 @@
     font-size: 14px;
     word-wrap: break-word;
     height: 475px;
-    background: -webkit-linear-gradient(black, rgb(236, 225, 200));
-    background: linear-gradient(black, rgb(236, 225, 200));
-    background: -moz-linear-gradient(black, rgb(236, 225, 200));
-    background: -o-linear-gradient(black, rgb(236, 225, 200));
+    background: -webkit-linear-gradient(black, inherit);
+    background: linear-gradient(black, inherit);
+    background: -moz-linear-gradient(black, inherit);
+    background: -o-linear-gradient(black, inherit);
     -webkit-background-clip: text;
     background-clip: text;
-    -moz-background-clip: text;
     -moz-background-clip: text;
   }
   button:hover, a:hover {
