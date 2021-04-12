@@ -34,7 +34,6 @@ body {
   /* Add fading text */
   background: -webkit-linear-gradient(black, rgb(236, 225, 200));
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .death {
