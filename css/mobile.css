@@ -13,6 +13,9 @@
     background: -moz-linear-gradient(black, rgb(236, 225, 200));
     background: -o-linear-gradient(black, rgb(236, 225, 200));
     -webkit-background-clip: text;
+    background-clip: text;
+    -moz-background-clip: text;
+    -moz-background-clip: text;
   }
   button:hover, a:hover {
     text-decoration: none;
