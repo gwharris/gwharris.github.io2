@@ -22,7 +22,6 @@
   }
   #button1, #button2 {
     /* display: block; */
-    animation: welcome 5s; /* causes smooth page load */
     position: relative;
     font-size: 14px;
   }
@@ -32,13 +31,6 @@
   .footer {
     position: fixed;
     font-size: 12px;
-  }
-  @keyframes welcome {
-    /* Changes setting for smooth page load */
-    0% {background-color: white;
-        color: white}
-    100% {background-color: rgb(236, 225, 200);
-        color: black;}
   }
 
 }
