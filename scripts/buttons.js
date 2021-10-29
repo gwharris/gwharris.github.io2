@@ -335,7 +335,6 @@ function update(searchID) {
     document.getElementById("button2").innerHTML = "";
     document.getElementById("linkIDs").innerHTML = "game over";
     html.style.backgroundColor = "#ffb8b8";
-    document.getElementById("game").color = "black";
     var fade = document.getElementById("fade");
     fade.parentNode.removeChild(fade);
   }
